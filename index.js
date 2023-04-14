@@ -3,6 +3,7 @@ function handleClick() {
     var letter = this.innerHTML;
     
     createSound(letter);
+    buttonAnimation(letter);
 }
 
 var buttons = document.querySelectorAll(".drum");
@@ -13,6 +14,7 @@ for (let index = 0; index < buttons.length; index++) {
 
 document.addEventListener("keydown", function (event) {
     createSound(event.key);
+    buttonAnimation(event.key);
 })
 
 function createSound(key) {
@@ -49,4 +51,13 @@ function createSound(key) {
             console.log(letter);
             break;
     }
+}
+
+function buttonAnimation(key) {
+    var currentBtn = document.querySelector(`.${key}`);
+    currentBtn.classList.add("pressed");
+
+    setTimeout(() => {
+        currentBtn.classList.remove("pressed");
+    }, 100);
 }
