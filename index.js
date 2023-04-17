@@ -6,7 +6,7 @@ function handleClick() {
     buttonAnimation(letter);
 }
 
-var buttons = document.querySelectorAll(".drum");
+var buttons = document.querySelectorAll("button");
 
 for (let index = 0; index < buttons.length; index++) {
     buttons[index].addEventListener("click", handleClick);
@@ -47,8 +47,37 @@ function createSound(key) {
             var tom4 = new Audio("sounds/tom-4.mp3");
             tom4.play();
             break;
+        //Piano
+        case "z":
+            var piano1 = new Audio("sounds/key01.mp3");
+            piano1.play();
+            break;
+        case "x":
+            var piano2 = new Audio("sounds/key04.mp3");
+            piano2.play();
+            break;
+        case "c":
+            var piano3 = new Audio("sounds/key08.mp3");
+            piano3.play();
+            break;
+        case "v":
+            var piano4 = new Audio("sounds/key12.mp3");
+            piano4.play();
+            break;
+        case "b":
+            var piano5 = new Audio("sounds/key16.mp3");
+            piano5.play();
+            break;
+        case "n":
+            var piano6 = new Audio("sounds/key20.mp3");
+            piano6.play();
+            break;
+        case "m":
+            var piano7 = new Audio("sounds/key24.mp3");
+            piano7.play();
+            break;
         default:
-            console.log(letter);
+            console.log(key);
             break;
     }
 }
